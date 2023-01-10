@@ -1,0 +1,44 @@
+:root {
+	background-color: gray;
+}
+
+.title {
+  color: aquamarine;
+	font-weight: 900;
+	text-align: center;
+	margin: 4rem;
+}
+
+.content {
+	background-color: blueviolet;
+	width: min(100vw, 70rem);
+	display: grid;
+	gap: 2rem;
+	grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+	place-items: center;
+	margin: 5rem auto;
+	box-shadow: 0 0 3em greenyellow;
+	padding: 3em;
+}
+
+a {
+	color:black;
+}
+
+.flow > * + * {
+	margin-top: var(--flow-space, var(--spacer));
+}
+
+.btn {
+	border: 4px solid aquamarine;
+	box-shadow: 0 0 3em aquamarine;
+	padding: 4px;
+	--clr: black;
+	--outline: 2px solid var(--clr);
+	transition: outline-offset 200ms ease;
+}
+
+.btn:hover {
+	outline: var(--outline);
+	outline-offset: 2px;
+}
