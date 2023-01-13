@@ -1,0 +1,43 @@
+html, body {
+	display: flex;
+	width: 100%;
+	height: 100%;
+}
+
+div {
+	position: relative;
+	width: 400px;
+	height: 200px;
+	border: 2px solid aqua;
+	cursor: pointer;
+	margin: auto;
+}
+
+div::before, div::after {
+	content: '';
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	transition: 0.3s ease-in-out;
+}
+
+div::before {
+	top: -10px;
+	left: -10px;
+	border-top: 2px solid blueviolet;
+	border-left: 2px solid blueviolet;
+	padding: 5px;
+}
+
+div::after {
+	right: -10px;
+	bottom: -10px;
+	border-right: 2px solid blueviolet;
+	border-bottom: 2px solid blueviolet;
+	padding: 5px;
+}
+
+div:hover::before, div:hover::after {
+	width: calc(100% + 8px);
+	height: calc(100% + 8px);;
+}
